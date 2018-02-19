@@ -11,6 +11,6 @@ getCloudFrontContent($path); //** $path is the path to your content.
 
 Usage:
 
-  $cloudFrontContent = new AwsController();
-  $file = $cloudFrontContent->getCloudFrontContent($path);
-  echo($file);
+    $cloudFrontContent = new AwsController();
+    $file = $cloudFrontContent->getCloudFrontContent($path);
+    echo($file);
