@@ -9,11 +9,6 @@ use Aws\S3\S3Client;
 use Cake\Core\Configure;
 use Cake\Event\Event;
 
-/**
- * Courses Controller
- *
- * @property \App\Model\Table\CoursesTable $Courses
- */
 class AwsController extends AppController
 {
 	public function beforeFilter(Event $event){
