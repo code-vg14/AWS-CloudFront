@@ -46,7 +46,7 @@ class AwsController extends AppController
 			$signedUrlCannedPolicy = $cloudFront->getSignedUrl([
 					'url'         => $cfCredentials['CF_CONTENT_URL'].$path,
 					'expires'     => $expires,
-					'private_key' => WWW_ROOT.'/'.$cfCredentials['PRIVATE_KEY'],
+					'private_key' => 'Path to your private Key'.'/'.$cfCredentials['PRIVATE_KEY'],
 					'key_pair_id' => $cfCredentials['KEY_PAIR']
 			]);			
 			if ($this->request->is('ajax') &&  isset($this->request->data['path']))	{
