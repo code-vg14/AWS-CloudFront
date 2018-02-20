@@ -17,18 +17,18 @@ Usage:
 
 You can also use ajax request to get content from cloudfront.
 
-                    $.ajax({
-                            type: "POST",
-                            url: url,           //*url to AWSController method*//
-                            data: {"path":source},      //* path to your content*//
-                            dataType : 'json',
-                            beforeSend: function(xhr){
-                                xhr.setRequestHeader('X-CSRF-Token',csrfToken);
-                            }, 
-                            success: function(data){         
-                                //*Do your stuff here with data returned*//
-                            },
-                            error: function (jqXHR, textStatus, errorThrown) {
-                              console.log('error');        
-                           }
-                        });
+    $.ajax({
+            type: "POST",
+            url: url,           //*url to AWSController method*//
+            data: {"path":source},      //* path to your content*//
+            dataType : 'json',
+            beforeSend: function(xhr){
+                xhr.setRequestHeader('X-CSRF-Token',csrfToken); //**  in case  you are using csrf token in your application *//
+            }, 
+            success: function(data){         
+                //*Do your stuff here with data returned*//
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+              console.log('error');        
+           }
+    });
